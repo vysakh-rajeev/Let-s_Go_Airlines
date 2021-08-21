@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search-Let's Go Airlines</title>
+    <link rel="stylesheet" href="/search.css">
+    <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="row">
+      <% for(var i=0; i<flights.length; i++) { %>
+        <div class="col-sm-6 col-lg-4 col-xl-3">
+          <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="/Let's Go Logo.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+                <img src="/2248344.jpg" style="width:300px;height:300px;">
+              <h1>Flight ID : <%= flights[i].Flight_ID %></h1>
+              <p><%= flights[i].Source %> to <%= flights[i].Destination %></p>
+              <p>Departure: <%= flights[i].Departure_time %> - Arrival: <%= flights[i].Arrival_time %></p>
+              <p>Seats Available: <%= flights[i].Seat_Availability %></p>
+              <p>Price: <%= Number(flights[i].Ticket_Price)*Number(flights[i].numberofpassengers) %></p>
+              <div class="justify-content-center">
+                <a class="btn btn-primary success" href="/book?fid=<%= flights[i].Flight_ID %>&no=<%= flights[i].numberofpassengers %>">Book Now</a>
+            </div>
+            </div>
+          </div>
+        </div>
+        </div>
+    <% } %>
+  </div>
+  <% if(flights.length==0){ %>
+    <div class="container">
+    <div class="row w-100 ml-0 justify-content-center mt-4"><h1 style="text-align: center;">No flights available</h1></div>
+    <div class="row w-100 ml-0 justify-content-center mt-3"><a href="/" class="btn btn-primary btn-small">Go To Home</a></div>
+    </div>
+    <% } %>
+</html>

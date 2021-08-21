@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Success-Let's Go Airlines</title>
+    <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+  </head>
+    <style>
+      body {
+        text-align: center;
+        padding: 10px 0;
+        background: #EBF0F5;
+      }
+        h1 {
+          color: #88B04B;
+          font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+          font-weight: 900;
+          font-size: 40px;
+          margin-bottom: 10px;
+        }
+        p {
+          color: #404F5E;
+          font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+          font-size: 25px;
+          margin: 0;
+        }
+      i {
+        color: #9ABC66;
+        font-size: 150px;
+        line-height: 200px;
+        margin-left:-15px;
+      }
+      .card {
+        background: white;
+        padding: 50px;
+        border-radius: 4px;
+        box-shadow: 0 1px 2px #C8D0D8;
+        display: inline-block;
+        margin: 0 auto;
+        
+      }
+     .input-grp{
+        width: 150px;
+        display: inline-block;
+    }
+    </style>
+    <body>
+      <div class="card">
+      <div style="border-radius:500px; height:200px; width:1000px; background: #F8FAF5; margin:0 auto;">
+        <i class="checkmark">✓</i>
+      </div>
+        <h1>Booking Successful</h1>
+        <p><b>Booking ID : <%= bookid %></b></p> 
+        <p><b>Flight ID : <%= fid %></b></p>
+        <p><%= source %> to <%= destination %></p>
+        <p>Departure Time: <%= dt %> - Arrival Time: <%= at %></p>
+        <p>Passenger Details: <%= pass %></p>
+        <p>Seat Number: <%= seats %></p>
+        <div class="input-grp">
+            <a href="/" class="btn btn-primary success">Go To Home</a>
+        </div>
+       
+      </div>
+    </body>
+</html>
