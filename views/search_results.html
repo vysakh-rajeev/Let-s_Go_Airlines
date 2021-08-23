@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Title, fac icon, card-bootstrapping and css linking -->
     <title>Search-Let's Go Airlines</title>
     <link rel="stylesheet" href="/search.css">
     <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
@@ -9,15 +10,19 @@
 </head>
 <body>
   <div class="row">
+    <!-- To display all the flights available after validation -->
       <% for(var i=0; i<flights.length; i++) { %>
         <div class="col-sm-6 col-lg-4 col-xl-3">
           <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
+              <!-- Card image and Design -->
               <img src="/Let's Go Logo.jpg" alt="Avatar" style="width:300px;height:300px;">
             </div>
             <div class="flip-card-back">
+              <!-- Card back-image and Design -->
                 <img src="/2248344.jpg" style="width:300px;height:300px;">
+                <!-- Details that needs to be displayed for user to book the flights -->
               <h1>Flight ID : <%= flights[i].Flight_ID %></h1>
               <p><%= flights[i].Source %> to <%= flights[i].Destination %></p>
               <p>Departure: <%= flights[i].Departure_time %> - Arrival: <%= flights[i].Arrival_time %></p>
@@ -34,6 +39,7 @@
   </div>
   <% if(flights.length==0){ %>
     <div class="container">
+      <!-- Page for Unavailable or invalid search results -->
     <div class="row w-100 ml-0 justify-content-center mt-4"><h1 style="text-align: center;">No flights available</h1></div>
     <div class="row w-100 ml-0 justify-content-center mt-3"><a href="/" class="btn btn-primary btn-small">Go To Home</a></div>
     </div>
