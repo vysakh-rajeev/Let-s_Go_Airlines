@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Title, fac icon and css linking -->
     <title>Let's Go Airlines</title>
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
@@ -8,6 +9,7 @@
 
 </head>
 <body>
+    <!-- Creating Top Navigation with Logo -->
     <div class="topnav">
         
         <div class="logo">
@@ -25,11 +27,18 @@
         </ul>
       </div>
     </div>
+    <!-- Scroll-News of Booking Availability -->
+    <div class="hwrap"><div class="hmove">
+        <div class="hitem">Booking is open only for next 3 Days.</div>
+        <div class="hitem">Booking is open only for next 3 Days.</div>
+      </div></div>
     <centre>
     <section>
+        <!-- Begin the search form -->
         <a name="home">
     <div class="booking form">
         <div class="booking">
+            <!-- Origin Field -->
             <label>Origin</label>
             <select id="origin" class="form-control">
                 <option value="">Select</option>
@@ -37,8 +46,8 @@
                     <option style="color: #000 !important;" value="<%= city[i] %>"><%= city[i] %></option>
                 <% } %>
             </select>
-<!--             <input type="text" id="origin" class="form-control" placeholder="City or Airpot"> -->
             <div class="error-msg-origin"></div>
+            <!-- Destination Field -->
             <label>Destination</label>
             <select id="destination" class="form-control">
                 <option value="">Select</option>
@@ -46,19 +55,21 @@
                     <option style="color: #000 !important;" value="<%= city[i] %>"><%= city[i] %></option>
                 <% } %>
             </select>
-<!--             <input type="text" id="destination" class="form-control" placeholder="City or Airpot"> -->
             <div class="error-msg-destination"></div>
         <div class="input-grp">
+            <!-- Date Picker Field -->
             <label>Date of Journey</label>
             <input type="date" id="date_of_journey"  class="form-control select-date">
             <div class="error-msg-date"></div>
         </div>
         <div class="input-grp">
+            <!-- No.of Passengers Field -->
             <label>No.of Passengers</label>
             <input type="number" id="numberof" class="form-control" value="1">
             <div class="error-msg-numberof"></div>
         </div>
         <div class="input-grp">
+            <!-- Search Button Field -->
             <button type="button" id="submit-button" class="btn btn-primary flight" disabled>Search for Flights</button>
         </div>
     </div>
@@ -67,6 +78,7 @@
     </section>
     </centre>
     <section>
+        <!-- Overview of the Company -->
         <a name="overview">
         <h2>Overview</h2>
         <p>Let’s Go Airlines is the project name for a new airline company that will focus on single
@@ -85,6 +97,7 @@
     </section>
         
     <section>
+        <!-- Vision of the Company -->
         <a name="vision">
         <h2>Vision</h2>
         <p>Let's Go aims to establish itself as a niche player in the long-haul market of business
@@ -93,6 +106,7 @@
         </a>
     </section>
     <section>
+        <!-- Values of the Company -->
         <a name="values">
         <h2>Values</h2>
         <p>We exist to provide a valuable service to our customers, a rewarding opportunity for our
@@ -109,8 +123,13 @@
             behind any decision</p>
         </a>
     </section>
+    <!-- Footer -->
+    <footer>
+        © Copyright Let's Go Airlines, 2021
+    </footer>
 </body>
 </html>
+<!-- Defining Button Function to perform Searching for Flights  -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){
@@ -155,3 +174,4 @@
         });
     })
 </script>
+<!-- End of Function Definition -->
