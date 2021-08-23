@@ -1,8 +1,12 @@
+/* Background image specifications */
+
 body{
     background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(2248344.jpg);
     background-size: cover;
     background-position: center;
 }
+
+/* Logo and Quick links */
 .logo img{
     float: left;
     width: 100px;
@@ -26,6 +30,8 @@ ul li a{
     border: 1px solid transparent;
     transition: 0.5s ease;
 }
+/* Form Styling */
+
 .booking form{
     max-width: 350px;
     border: 1px solid #fff;
@@ -64,9 +70,8 @@ input::placeholder{
     margin: 0;
 
 }
-.select-date::-webkit-calender-picker-indicator
-{
-    background: transparent !important;
+.select-date::-webkit-calendar-picker-indicator {
+    filter: invert(1);
 }
 .custom-select{
     color: #fff !important;
@@ -76,6 +81,7 @@ input::placeholder{
     border-radius: 0 !important;
     background: transparent !important;
 }
+/* Search Button styles */
 .flight
 {
     width: 100% !important;
@@ -99,13 +105,13 @@ input::placeholder{
 .topnav {
     background-color: #333;
     overflow: hidden;
-    position: fixed; /* Make it stick/fixed */
+    position: fixed; 
     top: 0;
-    width: 100%; /* Full width */
+    width: 100%; 
     transition: top 0.3s;
   }
   
-  /* Style the links inside the navigation bar */
+  /* Style for quick links inside navigation bar */
   .topnav a {
     float: right;
     color: #f2f2f2;
@@ -126,6 +132,7 @@ input::placeholder{
     background-color: #04AA6D;
     color: white;
   }
+  /* Styles for the Title */
   .title{
     position: absolute;
     color: #ced4da;
@@ -133,6 +140,8 @@ input::placeholder{
     left: 50%;
     transform: translate(-50%,-50%);
 }
+
+/* Border and error messages */
 .red-error-border{
     border: 3px solid #ff3232 !important;
 }
@@ -141,6 +150,7 @@ input::placeholder{
     font-size: 10px;
     padding: 5px;
 }
+
 section{  
     border:1px;
     color: #fff; 
@@ -148,3 +158,36 @@ section{
     margin:10px;  
     }  
 
+/* Footer Specifications */
+footer {
+        color: #fff;
+        text-align: center;
+        padding: 50px;
+    }
+    
+/* FIXED WRAPPER */
+.hwrap {
+    overflow: hidden; 
+    background: #eee;
+  }
+   
+  /* MOVING TICKER WRAPPER */
+  .hmove { 
+      display: flex; 
+}
+  
+  .hitem {
+    flex-shrink: 0;
+    width: 100%;
+    box-sizing: border-box;
+    color: #fff;
+    text-align: center;
+  }
+   
+  /* ANIMATION - MOVE ITEMS FROM RIGHT TO LEFT */
+  @keyframes tickerh {
+    0% { transform: translate3d(100%, 0, 0); }
+    100% { transform: translate3d(-200%, 0, 0); }
+  }
+  .hmove { animation: tickerh linear 25s infinite; }
+  .hmove:hover { animation-play-state: paused; }
