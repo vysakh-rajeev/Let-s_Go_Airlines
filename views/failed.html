@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Title, fac icon, card-bootstrapping and css linking -->
     <title>Unsuccessful-Let's Go Airlines</title>
     <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
   </head>
+  <!-- Styling for the Page -->
     <style>
       body {
         text-align: center;
@@ -47,13 +49,16 @@
     }
     </style>
     <body>
+      
       <div class="card">
       <div style="border-radius:500px; height:200px; width:1000px; background: #F8FAF5; margin:0 auto;">
         <i class="crossmark">X</i>
       </div>
+      <!-- Content of the Page -->
         <h1>Booking Unsuccessful</h1> 
         <p><strong>Reason: </strong><%= reason %></p>
         <div class="input-grp">
+          <!-- Button to go to Home Page -->
             <a href="/" class="btn btn-primary success">Go To Home</a>
         </div>
        
